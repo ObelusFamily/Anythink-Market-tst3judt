@@ -33,6 +33,10 @@ var UserSchema = new mongoose.Schema(
     following: [{ type: mongoose.Schema.Types.ObjectId, ref: "User" }],
     hash: String,
     salt: String
+    isVerified: {
+      type: String,
+      default: "not verified"
+    },
   },
   { timestamps: true }
 );
